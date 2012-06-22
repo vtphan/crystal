@@ -220,11 +220,14 @@ class Template(object):
 		# Tag rule: tag#id.class (optional_attributes="values") other-things
 		res = re.split(r'\s+' ,self.line, 1)
 		first, the_rest = res[0], res[1].strip() if len(res)==2 else ''
-		m = re.match(r'(\w+)((#[\w-]+)*)((\.[\w-]+)*)$', first)
-		if not m: 
-			raise Exception('syntax error', self.line)
-		tag, _id, _class = m.groups()[0], m.groups()[1], m.groups()[3]
-		
+		# m = re.match(r'(\w+)((#[\w-]+)*)((\.[\w-]+)*)$', first)
+		# if not m: 
+		# 	raise Exception('syntax error', self.line)
+		# tag, _id, _class = m.groups()[0], m.groups()[1], m.groups()[3]
+		tag = re.split('[#|\.]', first, 1)[0] or 'div'
+		_id = ''.join(re.findall('\#[a-zA-Z][a-zA-Z0-9\-\_\:]*', first))
+		_class = ''.join(re.findall('\.[a-zA-Z][a-zA-Z0-9\-\_\:]*', first))
+
 		attributes = ''
 		if _id or _class:
 			attributes = ' '+self.format_id_class(_id, _class)
