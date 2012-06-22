@@ -6,7 +6,6 @@ A pythonic, simple template engine.
 Example
 -------
 
-::
 html
 	title This is a page title
 	body
@@ -20,7 +19,7 @@ html
 
 
 Results in
-::
+
 <html>
 	<title>This is a page title</title>
 	<body>
