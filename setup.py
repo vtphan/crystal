@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='Crystal',
+    name='crystal',
     version='0.1',
     author='Vinhthuy Phan',
     author_email='vphan@memphis.edu',
