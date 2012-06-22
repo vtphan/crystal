@@ -29,8 +29,8 @@ Results in
 		<p class="para">
 			This is a paragraph
 		</p>
+		<footer id="footer">
+			Copyright @2012
+		</footer>
 	</body>
-	<footer id="footer">
-		Copyright @2012
-	</footer>
 </html>
