@@ -1,4 +1,6 @@
 Crystal
 =======
 
-A pythonic, simple template engine
+A pythonic, simple template engine.
+
+Author: Vinhthuy Phan
